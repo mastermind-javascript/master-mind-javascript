@@ -1,0 +1,21 @@
+<% if(found) { %>
+    <ul>
+    <% tasks.forEach(function(task) { %>
+        <li>
+            <a href="/<%= task.task %>/desc"><%= task.title %></a>
+        </li>
+    <% }); %>
+    </ul>
+
+<% } else { %>
+    <p>Niestety nic nie znaleziono dla frazy <strong><%= term %></strong>.<br>
+    Poniżej znajdziesz wszystkie przykłady:</p>
+
+    <ol>
+    <% tasks.forEach(function(task) { %>
+        <li>
+            <a href="/<%= task.task %>/desc"><%= task.title %></a>
+        </li>
+    <% }); %>
+    </ol>
+<% } %>

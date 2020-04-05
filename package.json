@@ -1,0 +1,32 @@
+{
+  "name": "kurs-es6",
+  "version": "1.0.0",
+  "description": "Aplikacja do serwowania plików źródłowych kursu",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "createUserCatalog": "node util/generateFolder.js",
+    "initTaskContent": "node util/initTaskContent.js"
+  },
+  "author": "Piotr Palarz",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.1.0",
+    "copy-dir": "^1.2.0",
+    "ejs": "^3.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-sass": "^4.0.2",
+    "highlight.js": "^9.18.1",
+    "http-shutdown": "^1.2.2",
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.2",
+    "serve": "^11.3.0"
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "taskId": 1,
+    "title": "Odwróć to",
+    "link": "https://repl.it/@przeprogramowan/odwroc-to"
+  },
+  {
+    "taskId": 2,
+    "title": "Waltaskacja",
+    "link": "https://repl.it/@przeprogramowan/walidacja"
+  },
+  {
+    "taskId": 3,
+    "title": "Przeplatanie",
+    "link": "https://repl.it/@przeprogramowan/przeplatanie"
+  },
+  {
+    "taskId": 4,
+    "title": "Predykaty",
+    "link": "https://repl.it/@przeprogramowan/predykaty"
+  },
+  {
+    "taskId": 5,
+    "title": "Pangram",
+    "link": "https://repl.it/@przeprogramowan/pangram"
+  }
+]

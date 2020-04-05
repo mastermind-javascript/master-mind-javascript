@@ -1,0 +1,28 @@
+#scriptPreview{
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    background: #1E1E1E;
+    color: #DCDCDC;
+    border-radius: 4px;
+}
+
+.mmj-main {
+    margin-bottom: 30px;
+}
+
+.mmj-heading {
+    margin-bottom: 30px;
+}
+
+.mmj-script {
+    margin-top: 30px;
+}
+
+.mmj-script pre {
+    margin-top: 30px;
+}
+
+#scriptPreview.mmj-hidden {
+    display: none;
+}

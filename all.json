@@ -1,0 +1,107 @@
+[
+  {
+    "taskId": 1,
+    "title": "Odwróć to",
+    "link": "https://repl.it/@przeprogramowan/odwroc-to"
+  },
+  {
+    "taskId": 2,
+    "title": "Waltaskacja",
+    "link": "https://repl.it/@przeprogramowan/walidacja"
+  },
+  {
+    "taskId": 3,
+    "title": "Przeplatanie",
+    "link": "https://repl.it/@przeprogramowan/przeplatanie"
+  },
+  {
+    "taskId": 4,
+    "title": "Predykaty",
+    "link": "https://repl.it/@przeprogramowan/predykaty"
+  },
+  {
+    "taskId": 5,
+    "title": "Pangram",
+    "link": "https://repl.it/@przeprogramowan/pangram"
+  },
+  {
+    "taskId": 6,
+    "title": "W dwóch krokach",
+    "link": "https://repl.it/@przeprogramowan/w-dwoch-krokach"
+  },
+  {
+    "taskId": 7,
+    "title": "Emoji",
+    "link": "https://repl.it/@przeprogramowan/emoji"
+  },
+  {
+    "taskId": 8,
+    "title": "Czas trwania",
+    "link": "https://repl.it/@przeprogramowan/Czas-trwania"
+  },
+  {
+    "taskId": 9,
+    "title": "Fabryka",
+    "link": "https://repl.it/@przeprogramowan/Fabryka"
+  },
+  {
+    "taskId": 10,
+    "title": "Jeden by wszystkimi rządzić",
+    "link": "https://codepen.io/przeprogramowani/pen/zYxMGjR"
+  },
+  {
+    "taskId": 11,
+    "title": "Thing instaske the box",
+    "link": "https://repl.it/@przeprogramowan/Thing-inside-the-box"
+  },
+  {
+    "taskId": 12,
+    "title": "Mr. Elliot",
+    "link": "https://repl.it/@przeprogramowan/Mr-Elliot"
+  },
+  {
+    "taskId": 13,
+    "title": "Izogram",
+    "link": "https://repl.it/@przeprogramowan/Izogram"
+  },
+  {
+    "taskId": 14,
+    "title": "Hashtagujesz",
+    "link": "https://repl.it/@przeprogramowan/Hashtagujesz"
+  },
+  {
+    "taskId": 15,
+    "title": "Funkcje tablicowe",
+    "link": "https://repl.it/@przeprogramowan/Funkcje-tablicowe"
+  },
+  {
+    "taskId": 16,
+    "title": "Policz słowa",
+    "link": "https://repl.it/@przeprogramowan/Policz-slowa"
+  },
+  {
+    "taskId": 17,
+    "title": "Anagram",
+    "link": "https://repl.it/@przeprogramowan/Anagram"
+  },
+  {
+    "taskId": 18,
+    "title": "Weryfikacja ISBN",
+    "link": "https://repl.it/@przeprogramowan/Weryfikacja-ISBN"
+  },
+  {
+    "taskId": 19,
+    "title": "Dopasuj nawiasy",
+    "link": "https://repl.it/@przeprogramowan/Dopasuj-nawiasy"
+  },
+  {
+    "taskId": 20,
+    "title": "Płaska tablica",
+    "link": "https://repl.it/@przeprogramowan/Plaska-tablica"
+  },
+  {
+    "taskId": 21,
+    "title": "HTML String",
+    "link": "https://repl.it/@przeprogramowan/HTML-String"
+  }
+]

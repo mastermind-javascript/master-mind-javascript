@@ -1,0 +1,7 @@
+<% if(!noscript && !noEmbed) { %>
+<script src="/<%= relativePath %>js/<%= scriptName || "script" %>.js"<% if(scriptType == "module") { %> type="module"<% } %>></script>
+<% } %>
+<% if(scripts) { %>
+<% scripts.forEach(function(url) { %>
+<script src="/<%= relativePath %>js/<%= url %>"<% if(scriptType == "module") { %> type="module"<% } %>></script> <% }) %>
+<% } %>

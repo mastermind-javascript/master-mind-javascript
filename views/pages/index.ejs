@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MasterMind Javascript - <%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/vs2015.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <%- include("../partials/header") %>
+
+    <main class="container edu-main">
+
+        <h2 class="mmj-heading"><span><%= title %></span></h2>
+        <% if(subtitle) { %>
+            <h4 class="mmj-heading"><span><%= subtitle %></span></h4>
+        <% } %>
+
+        <% if(error) { %>
+            <%- include("../partials/error") %>
+        <% } else { %>
+            <% if(home) { %>
+                <%- include("../partials/home") %>
+            <% } else if(noEmbed) { %>
+                <%- include("../partials/noembed") %>
+            <% } else { %>
+                <% if(userList) { %>
+                    <%- include("../partials/userlist.ejs") %>
+                <% } else { %>
+                    <div class="mmj-content">
+                        <%- include(path + "index.html") %>
+                    </div>
+                    <% if(scriptContent !== false) { %>
+                        <%- include("../partials/script.ejs") %>
+                    <% } %>
+                <% } %>
+            <% } %>
+        <% } %>
+
+    </main>
+
+    <%- include("../partials/footer") %>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

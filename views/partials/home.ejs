@@ -1,0 +1,14 @@
+    <ol>
+    <% tasks.forEach(function(task) { %>
+        <li>
+            <a href="/task/<%= task.taskId %>/desc"><%= task.title %></a>
+            <ul>
+              <% users.forEach(function(user) { %>
+                <li>
+                  <a href="/task/<%= task.taskId %>/user/<%= user.id %>"><%= user.name %></a>
+                </li>
+              <% }); %>
+            </ul>
+        </li>
+    <% }); %>
+    </ol>
