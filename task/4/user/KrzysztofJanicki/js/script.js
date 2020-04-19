@@ -22,7 +22,14 @@
 */
 
 function applyPredicate(elements, predicate) {
-  return [1, 2, 3];
+  if (Array.isArray(elements)) {
+    result = [];
+    elements.forEach(element => predicate(element) ? result.push(element) : '');
+    return result;
+  }
+  else {
+    throw new Error('Podany element nie jest tablicą');
+  }
 }
 
 /* Weryfikacja */
@@ -41,3 +48,10 @@ function verify(input, goal) {
 verify(applyPredicate([1, 2, 3], element => element > 2), [3]);
 verify(applyPredicate(['a', 'b', 'c'], element => ['b', 'c'].includes(element)), ['b', 'c']);
 verify(applyPredicate(['x', 'y'], element => element === 'z'), []);
+
+console.log('\nObsługa błędu:\n');
+try {
+  applyPredicate('test', element => element > 2);
+} catch (e) {
+  console.log(e.message);
+}
