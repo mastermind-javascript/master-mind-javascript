@@ -25,7 +25,14 @@
 */
 
 function zipIt(first, second) {
-  return `${first}${second}`;
+  if (typeof first !== 'number' || typeof second !== 'number') throw new TypeError('Wprowadzone wartości nie są typu number');
+  const result = [];
+
+  for (let i = 0; i < Math.max(first.toString().length, second.toString().length); i++) {
+    result.push(first.toString()[i], second.toString()[i]);
+  }
+
+  return result.join('');
 }
 
 /* Weryfikacja */
@@ -41,3 +48,18 @@ function verify(input, goal) {
 verify(zipIt(111, 222), '121212');
 verify(zipIt(123, 456), '142536');
 verify(zipIt(12, 5555), '152555');
+
+// Obsługa błedów
+console.log('\nObsługa błędu\n');
+
+try {
+  zipIt([1, 2], '123');
+} catch (e) {
+  console.log(e.message);
+}
+
+try {
+  zipIt(111, 'aaa');
+} catch (e) {
+  console.log(e.message);
+}
