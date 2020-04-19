@@ -10,6 +10,7 @@
     "**/.git": true,
     "**/server.js": true,
     "**/yarn-error.log": true,
-    "**/yarn.lock": true
+    "**/yarn.lock": true,
+    "**/task/**/desc/**": true
   }
 }

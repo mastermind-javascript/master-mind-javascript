@@ -19,6 +19,17 @@ Przede wszystkim instalujemy wszystkie zależności
 $ npm install
 ```
 
+> dla ułatwienia pracy dodałem plik z ustawieniami dla Vsisual studio code. Znajduje się ona w pliku .vscode/settings.json [Ukrywa pliki](https://www.donovanbrown.com/post/Hide-folders-in-Visual-Studio-Code-Explorer), które są mniej istotne w codziennej pracy.
+
+> Protip jeśli chcesz widzieć tylko swoje katalogi w zadaniach trzeba dodać do [globalnych ustawien](https://supunkavinda.blog/vscode-editing-settings-json) VSC nastpujące wykluczenie:
+
+```
+"**/task/**/user/[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,z]*": true,
+"**/task/**/user/[^nazwaUżytkownika]*": true
+```
+
+> Dodajemy to w kluczu "files.exclude":
+
 ### Chcę po prostu zrobić zadanie
 
 Uruchom serwer poprzez skrypt zapisany w pliku package.json
