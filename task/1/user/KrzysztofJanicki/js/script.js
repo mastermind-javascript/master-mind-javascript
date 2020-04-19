@@ -22,7 +22,8 @@
 */
 
 function reverseMe(input) {
-  return input;
+  if (typeof input !== 'string') throw new TypeError(`Wprowadzona wartość "${input}" nie jest stringiem`);
+  return input.split("").reverse().join("");
 }
 
 /* Weryfikacja */
@@ -39,3 +40,16 @@ verify(reverseMe('a'), 'a');
 verify(reverseMe('abc'), 'cba');
 verify(reverseMe('Przeprogramowani'), 'inawomargorpezrP');
 verify(reverseMe('Brawo!'), '!owarB');
+
+
+try {
+  verify(reverseMe(['a', 'b']), 'a');
+} catch (e) {
+  console.log(e.message);
+}
+
+try {
+  verify(reverseMe(123), 'cba');
+} catch (e) {
+  console.log(e.message);
+}
