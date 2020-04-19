@@ -27,7 +27,10 @@
 */
 
 function validatePassword(password) {
-  return true
+  if (typeof password !== 'string') throw new TypeError(`Podana wartość "${password}" nie jest stringiem!`);
+  const validationResult = new RegExp('(?=.*[0-9])(?=.*[!@#]).{3,10}$');
+
+  return validationResult.test(password);
 }
 
 /* Weryfikacja */
@@ -43,3 +46,18 @@ function verify(input, goal) {
 verify(validatePassword(''), false);
 verify(validatePassword('lol'), false);
 verify(validatePassword('ToDziala1#'), true);
+
+// Obsługa błedów
+console.log('\nobsługa błędów:\n');
+
+try {
+  validatePassword(123);
+} catch (e) {
+  console.log(e.message);
+}
+
+try {
+  validatePassword([1, 'a']);
+} catch (e) {
+  console.log(e.message);
+}
