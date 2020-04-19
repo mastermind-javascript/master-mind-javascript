@@ -1,14 +1,14 @@
 {
-  "name": "kurs-es6",
+  "name": "master-mind-javascript",
   "version": "1.0.0",
-  "description": "Aplikacja do serwowania plików źródłowych kursu",
+  "description": "Application for collecting source files",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "createUserCatalog": "node util/generateFolder.js",
     "initTaskContent": "node util/initTaskContent.js"
   },
-  "author": "Piotr Palarz",
+  "author": "Sebastian Wesołowski",
   "license": "ISC",
   "dependencies": {
     "babel-eslint": "^10.1.0",
@@ -25,6 +25,7 @@
     "gulp-sass": "^4.0.2",
     "highlight.js": "^9.18.1",
     "http-shutdown": "^1.2.2",
+    "marked": "^0.8.2",
     "ncp": "^2.0.0",
     "nodemon": "^2.0.2",
     "serve": "^11.3.0"

@@ -87,7 +87,9 @@ class FileStructure {
 
     this.pathStartIndexfile = normalize(`${this.pathTaskDesc}/index.html`);
     this.pathStartJSfile = normalize(`${this.pathTaskJs}/script.js`);
-    this.pathScriptContent = normalize(`${__dirname}/../taskContent/${taskId}/script.js`);
+    this.pathScriptContent = normalize(
+      `${__dirname}/../taskContent/${taskId}/script.js`
+    );
   }
 }
 
@@ -113,12 +115,13 @@ class Task extends FileStructure {
   createTaskStructure() {
     createFile(this.pathStartIndexfile);
     createFile(this.pathStartJSfile);
-    const scriptContent = fs.readFileSync(this.pathScriptContent, { encoding: "utf8" });
+    const scriptContent = fs.readFileSync(this.pathScriptContent, {
+      encoding: "utf8",
+    });
 
     fs.writeFile(this.pathStartJSfile, scriptContent, function (err) {
       if (err) return console.log(err);
     });
-
   }
 
   createFolderForUser() {

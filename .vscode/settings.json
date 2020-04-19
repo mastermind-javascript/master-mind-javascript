@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "**/util": true,
+    "**/node_modules": true,
+    "**/.gitignore": true,
+    "**/all.json": true,
+    "**/gulpfile.js": true,
+    "**/views": true,
+    "**/public": true,
+    "**/.git": true,
+    "**/server.js": true,
+    "**/yarn-error.log": true,
+    "**/yarn.lock": true
+  }
+}

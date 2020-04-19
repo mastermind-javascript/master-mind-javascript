@@ -1,30 +1,30 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const browserSync = require('browser-sync');
-const nodemon = require('gulp-nodemon');
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const browserSync = require("browser-sync");
+const nodemon = require("gulp-nodemon");
 
-sass.compiler = require('node-sass');
+sass.compiler = require("node-sass");
 
 // Sass compilation
-gulp.task('sass', function() {
+gulp.task("sass", function () {
   return gulp
-    .src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .src("./sass/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./css"));
 });
 
 // Sass watching, depending on "sass" task
-gulp.task('sass:watch', function() {
-  gulp.watch('./sass/**/*.scss', gulp.series('sass'));
+gulp.task("sass:watch", function () {
+  gulp.watch("./sass/**/*.scss", gulp.series("sass"));
 });
 
 // Nodemon task:
 // Start nodemon once and execute callback (browser-sync)
-gulp.task('nodemon', cb => {
+gulp.task("nodemon", (cb) => {
   let started = false;
   return nodemon({
-    script: 'server.js'
-  }).on('start', () => {
+    script: "server.js",
+  }).on("start", () => {
     if (!started) {
       cb();
       started = true;
@@ -35,12 +35,12 @@ gulp.task('nodemon', cb => {
 // BrowserSync task:
 // calls nodemon tasks and pass itself as callback
 gulp.task(
-  'browser-sync',
-  gulp.series('nodemon', () => {
+  "browser-sync",
+  gulp.series("nodemon", () => {
     browserSync.init(null, {
-      proxy: 'http://localhost:3000',
-      files: ['task/**/*.*'],
-      port: 5000
+      proxy: "http://localhost:3000",
+      files: ["task/**/*.*"],
+      port: 5000,
     });
   })
 );
@@ -48,4 +48,4 @@ gulp.task(
 // Dev Task:
 // Parallel execution of browser-sync/nodemon
 // and sass watching
-gulp.task('default', gulp.parallel('browser-sync', 'sass:watch'));
+gulp.task("default", gulp.parallel("browser-sync", "sass:watch"));
