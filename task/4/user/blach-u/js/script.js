@@ -22,7 +22,8 @@
 */
 
 function applyPredicate(elements, predicate) {
-  return [1, 2, 3];
+  const wynik = elements.filter(predicate); //map zwracał wartosci typu bool
+  return wynik;
 }
 
 /* Weryfikacja */
