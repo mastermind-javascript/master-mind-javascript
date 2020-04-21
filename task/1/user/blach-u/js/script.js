@@ -1,30 +1,32 @@
 /*
-* Opanuj JavaScript - Przeprogramowani.pl
-* I. Fundamenty języka JavaScript
-*
-* Ćwiczenie 1 - "Odwróć to"
-*/
+ * Opanuj JavaScript - Przeprogramowani.pl
+ * I. Fundamenty języka JavaScript
+ *
+ * Ćwiczenie 1 - "Odwróć to"
+ */
 
 /*
-* Cel zadania
-*------------
-* Zaimplementuj funkcję, która odwróci przekazany do niej string.
-*
-* Przykład:
-* reverseMe('abc') // => 'cba'
-*/
+ * Cel zadania
+ *------------
+ * Zaimplementuj funkcję, która odwróci przekazany do niej string.
+ *
+ * Przykład:
+ * reverseMe('abc') // => 'cba'
+ */
 
 /*
-* Punkty dodatkowe
-*-----------------
-* Funkcja powinna weryfikować, czy przekazany parametr jest typu string. Jeśli parametr nie
-* spełnia tego warunku, funkcja powinna rzucić wyjątek.
-*/
+ * Punkty dodatkowe
+ *-----------------
+ * Funkcja powinna weryfikować, czy przekazany parametr jest typu string. Jeśli parametr nie
+ * spełnia tego warunku, funkcja powinna rzucić wyjątek.
+ */
 
 function reverseMe(input) {
-  return input;
+  let x = input.split('').reverse().join('');
+  x;
+  return x;
 }
-
+//test
 /* Weryfikacja */
 
 function verify(input, goal) {
@@ -39,3 +41,4 @@ verify(reverseMe('a'), 'a');
 verify(reverseMe('abc'), 'cba');
 verify(reverseMe('Przeprogramowani'), 'inawomargorpezrP');
 verify(reverseMe('Brawo!'), '!owarB');
+console.log('test');
