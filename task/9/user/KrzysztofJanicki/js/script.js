@@ -12,7 +12,7 @@
 */
 
 function factory() {
-    const quote = 'Cool!';
+    return { quote: 'Cool!' };
 }
 
 verify(factory().quote, 'Cool!');
