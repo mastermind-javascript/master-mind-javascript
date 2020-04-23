@@ -17,9 +17,17 @@
 * 
 */
 
-function isogram(word) {
+const isogram = word => {
+    const letters = {};
+    word.toLowerCase().split('').forEach((letter) => {
+        if (letters.hasOwnProperty(letter)) {
+            letters[letter]++;
+        } else {
+            letters[letter] = 1;
+        }
+    });
 
-    return '';
+    return (Math.max(...Object.values(letters)) === 1) ? true : false;
 }
 
 /* Weryfikacja */
