@@ -25,6 +25,8 @@ const emojiMappings = {
 };
 
 function useEmoji(input) {
+    Object.keys(emojiMappings).forEach(key => input = input.replace(new RegExp(key, 'gi'), emojiMappings[key]));
+
     return input;
 }
 
