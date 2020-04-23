@@ -32,7 +32,10 @@
 */
 
 function withPrefix(prefix) {
-    return 'test';
+    let result = function withPosfix(withPrefix){
+        return prefix + withPrefix;                 //Troche nwm co tu się wydarzylo ale Quokka robi robote <3
+    }
+    return result;
 }
 
 /* Weryfikacja */
