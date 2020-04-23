@@ -22,14 +22,11 @@
 */
 
 function applyPredicate(elements, predicate) {
-  if (Array.isArray(elements)) {
-    result = [];
-    elements.forEach(element => predicate(element) ? result.push(element) : '');
-    return result;
-  }
-  else {
+  if (!Array.isArray(elements)) {
     throw new Error('Podany element nie jest tablicą');
   }
+
+  return elements.filter(element => predicate(element));
 }
 
 /* Weryfikacja */
