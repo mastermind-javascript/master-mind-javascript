@@ -26,7 +26,7 @@ function applyPredicate(elements, predicate) {
     throw new Error('Podany element nie jest tablicą');
   }
 
-  return elements.filter(element => predicate(element));
+  return elements.filter(predicate);
 }
 
 /* Weryfikacja */
