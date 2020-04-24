@@ -18,10 +18,7 @@
 * 
 */
 
-function findTags(message) {
-
-    // return '' lub [];
-}
+const findTags = message => message.match(/#[a-z\d-]+/gi).map(hash => hash.replace(/#/g, ''));
 
 /* Weryfikacja */
 

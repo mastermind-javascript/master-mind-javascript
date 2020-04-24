@@ -32,7 +32,13 @@
 */
 
 function withPrefix(prefix) {
-    return 'test';
+    if (typeof prefix !== 'string') throw new Error('Wprowadzona wartość nie jest stringiem!');
+    const sufix = (name) => {
+        if (typeof name !== 'string') throw new Error('Wprowadzona wartość nie jest stringiem!');
+        return `${prefix}${name}`;
+    }
+
+    return sufix;
 }
 
 /* Weryfikacja */

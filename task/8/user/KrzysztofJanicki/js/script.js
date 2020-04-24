@@ -383,8 +383,33 @@ const lessons = [
     }
 ];
 
+function totalTimeSecounds(object) {
+    return object.reduce((total, { length }) => total += parseInt(length.split(':')[0] * 60) + parseInt(length.split(':')[1]), 0);
+}
+
+function timeFormat(secounds) {
+    const timeValues = [];
+    timeValues[0] = parseInt(secounds / 3600);
+    timeValues[1] = parseInt((secounds % 3600) / 60);
+    timeValues[2] = parseInt(secounds % 60);
+
+    return `${timeValues[0]} godzin, ${timeValues[1]} minut i ${timeValues[2]} sekund`;
+}
+
+function modulesSort(module) {
+    return lessons.filter(({ name }) => name.includes(`[${module}x`));
+}
+
+function procentageScore(total, value) {
+    return (value / total * 100).toFixed(0);
+}
+
 function totalDuration() {
-    return '';
+    console.log(`Kurs Opanuj JavaScript trwa ${timeFormat(totalTimeSecounds(lessons))}.
+     Moduł Adama: ${timeFormat(totalTimeSecounds(modulesSort(1)))}, czyli ${procentageScore(totalTimeSecounds(lessons), totalTimeSecounds(modulesSort(1)))} %
+     Moduł Przemka: ${timeFormat(totalTimeSecounds(modulesSort(2)))}, czyli ${procentageScore(totalTimeSecounds(lessons), totalTimeSecounds(modulesSort(2)))} %
+     Moduł Marcina: ${timeFormat(totalTimeSecounds(modulesSort(3)))}, czyli ${procentageScore(totalTimeSecounds(lessons), totalTimeSecounds(modulesSort(3)))} %
+  `);
 }
 
 totalDuration();

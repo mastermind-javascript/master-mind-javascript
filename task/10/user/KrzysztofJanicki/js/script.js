@@ -24,7 +24,7 @@
 */
 
 function rulez() {
-    return []
+    return [].concat(...arguments);
 }
 
 /* Weryfikacja */
@@ -40,3 +40,4 @@ function verify(input, goal) {
 verify(rulez([1, 5], [6, 1]), '1,5,6,1');
 verify(rulez([1], [2], [3], [4], [5], [6]), '1,2,3,4,5,6');
 
+console.log(rulez([1, 5], [6, 1]));

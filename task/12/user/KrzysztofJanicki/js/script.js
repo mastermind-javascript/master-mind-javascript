@@ -18,9 +18,25 @@
 * 
 */
 
-function greeting(message) {
+const wordsMapping = {
+    'a': '4',
+    'e': '3',
+    'o': '0',
+    'i': '1',
+    's': '5'
+}
 
-    return '';
+const even = number => (number % 2 === 0) ? true : false;
+const greeting = message => {
+    const result = message.toLowerCase().split('');
+    for (let i in result) {
+        if (wordsMapping.hasOwnProperty(result[i])) {
+            result[i] = wordsMapping[result[i]];
+        }
+        if (even(i)) result[i] = result[i].toUpperCase();
+    }
+
+    return result.join('');
 }
 
 /* Weryfikacja */

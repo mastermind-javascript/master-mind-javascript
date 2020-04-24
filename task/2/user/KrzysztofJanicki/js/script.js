@@ -28,9 +28,8 @@
 
 function validatePassword(password) {
   if (typeof password !== 'string') throw new TypeError(`Podana wartość "${password}" nie jest stringiem!`);
-  const validationResult = new RegExp('(?=.*[0-9])(?=.*[!@#]).{3,10}$');
 
-  return validationResult.test(password);
+  return new RegExp('(?=.*[0-9])(?=.*[!@#]).{3,10}$').test(password);
 }
 
 /* Weryfikacja */
