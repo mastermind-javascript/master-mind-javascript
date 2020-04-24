@@ -24,35 +24,28 @@
  *-----------------
  * Zweryfikuj, czy konkretna litera występuje w podanym zdaniu tylko jeden raz.
  */
-
 function isPangram(sentence) {
-  const alphabetArray = "abcdefghijklmnoprstuwyzśćóźąęłńż".split("");
   let isPangram = false;
-  let normalizeData = sentence.split("").map((el) => el.toLocaleLowerCase());
-  let countUniqeChar = 0;
+  const ALPHABET_ARRAY = "abcdefghijklmnoprstuwyzśćóźąęłńż".length;
+  let normalizedData = sentence.toLocaleLowerCase().match(/[a-zśćóźąęłńż]/g);
+  let storageChar = {};
 
-  function isCharExist() {
-    let storage = [];
-    return (char) => {
-      if (storage.includes(char)) {
-        return storage;
-      }
-      storage.push(char);
-
-      return storage;
-    };
-  }
-
-  const checkChar = isCharExist();
-
-  alphabetArray.forEach((char) => {
-    if (normalizeData.find((el) => el === char)) {
-      countUniqeChar = checkChar(char.toLocaleLowerCase());
+  normalizedData.forEach((char) => {
+    if (char in storageChar) {
+      storageChar[char] = storageChar[char] + 1;
+    } else {
+      storageChar[char] = 1;
     }
   });
 
-  if (alphabetArray.length == countUniqeChar.length) {
+  if (ALPHABET_ARRAY == Object.keys(storageChar).length) {
     isPangram = true;
+  }
+
+  for (const key in storageChar) {
+    if (storageChar[key] > 1) {
+      console.log(`Litera ${key} występuje ${storageChar[key]} razy`);
+    }
   }
   return isPangram;
 }
@@ -67,6 +60,6 @@ function verify(input, goal) {
   }
 }
 
-verify(isPangram("test"), false);
+verify(isPangram("test !"), false);
 verify(isPangram("Dość gróźb fuzją, klnę, pych i małżeństw!"), true);
 verify(isPangram("Dość gróźb fuzją, klnę, pych i małże!"), false);
